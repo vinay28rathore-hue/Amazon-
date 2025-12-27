@@ -239,4 +239,79 @@ ul a{
 .copyright{
    
     padding-top: 5px;
+
+}
+/* --- MEDIA QUERIES --- */
+
+/* Laptops and Small Desktops (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .nav-search {
+        width: 400px; /* Shrink search bar */
+    }
+    .box {
+        width: 45%; /* Show 2 cards per row instead of 4 */
+        margin-bottom: 20px;
+    }
+}
+
+/* Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px;
+    }
+
+    .nav-search {
+        width: 100%;
+        order: 3; /* Move search bar to a new line below logo/links */
+        margin-top: 10px;
+    }
+
+    .panel-ops {
+        display: none; /* Hide extra links to save space */
+    }
+
+    .panel-deals {
+        width: 100%;
+        text-align: center;
+    }
+
+    .foot-panel2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* 2 columns in footer */
+        height: auto;
+        padding-bottom: 20px;
+        gap: 20px;
+        text-align: center;
+    }
+}
+
+/* Mobile Phones (max-width: 480px) */
+@media (max-width: 480px) {
+    .nav-address, .nav-return {
+        display: none; /* Hide non-essential info on tiny screens */
+    }
+
+    .hero-section {
+        height: 250px; /* Smaller hero image */
+    }
+
+    .hero-msg {
+        width: 90%;
+        font-size: 0.75rem;
+        padding: 5px;
+    }
+
+    .box {
+        width: 90%; /* Single card per row */
+    }
+
+    .foot-panel2 {
+        grid-template-columns: 1fr; /* Single column footer */
+    }
+
+    .nav-logo {
+        width: 80px;
+    }
 }
